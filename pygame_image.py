@@ -27,8 +27,10 @@ def main():
         elif key_lst[pg.K_DOWN]:
             kk_rct.move_ip((0,1))
         elif key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((1,0))
+            kk_rct.move_ip((2,0))
         elif key_lst[pg.K_LEFT]:
+            kk_rct.move_ip((-2,0))
+        else:
             kk_rct.move_ip((-1,0))
 
 
