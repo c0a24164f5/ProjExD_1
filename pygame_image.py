@@ -21,6 +21,7 @@ def main():
 
         
         screen.blit(bg_img, [-tmr, 0])
+        screen.blit(bg_img, [-tmr+1600, 0])
         screen.blit(kk_img,[300,200])
         
         pg.display.update()
