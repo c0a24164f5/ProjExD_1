@@ -26,9 +26,9 @@ def main():
         key_lst = pg.key.get_pressed()
         dx, dy = -1, 0
         if key_lst[pg.K_UP]:
-            dx, dy = 0, -1
+            dx, dy = -1, -1
         elif key_lst[pg.K_DOWN]:
-            dx, dy = 0, 1
+            dx, dy = -1, 1
         elif key_lst[pg.K_RIGHT]:
             dx, dy = 2, 0
         elif key_lst[pg.K_LEFT]:
