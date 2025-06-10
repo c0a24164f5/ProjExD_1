@@ -21,17 +21,21 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        key_lst=pg.key.get_pressed()
+        #
+
+        key_lst = pg.key.get_pressed()
+        dx, dy = -1, 0
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip((0,-1))
+            dx, dy = 0, -1
         elif key_lst[pg.K_DOWN]:
-            kk_rct.move_ip((0,1))
+            dx, dy = 0, 1
         elif key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((2,0))
+            dx, dy = 2, 0
         elif key_lst[pg.K_LEFT]:
-            kk_rct.move_ip((-2,0))
-        else:
-            kk_rct.move_ip((-1,0))
+            dx, dy = -2, 0
+
+        kk_rct.move_ip(dx, dy)
+
 
 
         x=tmr%3200
@@ -43,7 +47,7 @@ def main():
         
         pg.display.update()
         tmr += 1        
-        clock.tick(10000)
+        clock.tick(200)
 
 
 
